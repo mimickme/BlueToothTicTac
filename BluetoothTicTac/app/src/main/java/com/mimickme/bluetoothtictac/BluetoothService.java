@@ -1,6 +1,7 @@
 package com.mimickme.bluetoothtictac;
 
 import android.bluetooth.BluetoothAdapter;
+import android.os.Handler;
 
 /**
  * Created by mimickme on 6/6/2016.
@@ -8,10 +9,12 @@ import android.bluetooth.BluetoothAdapter;
 public class BluetoothService
 {
     BluetoothAdapter bluetoothAdapter;
+    Handler handler;
 
-    public void BluetoothHandler()
+    public BluetoothService(Handler handler)
     {
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        this.handler = handler;
     }
 
     public boolean supportBluetooth()

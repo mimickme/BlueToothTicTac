@@ -3,6 +3,7 @@ package com.mimickme.bluetoothtictac;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentActivity;
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        btService = new BluetoothService();
+        btService = new BluetoothService(handler);
 
         if (!btService.supportBluetooth())
         {
@@ -88,4 +89,13 @@ public class MainActivity extends AppCompatActivity {
         // This will place the move into our array/whatever and validate victory or tie conditions
         // If the game is proceeding, we should flag that is our our player's move
     }
+
+    private final Handler handler = new Handler()
+    {
+        @Override
+        public void handleMessage(Message msg)
+        {
+
+        }
+    };
 }

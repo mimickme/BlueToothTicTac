@@ -17,9 +17,6 @@ public class DeviceListActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         Intent intent = getIntent();
-        String playerName = intent.getStringExtra(MainActivity.PLAYER_NAME);
-
-
     }
 
 
