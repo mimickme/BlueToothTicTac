@@ -24,7 +24,7 @@
         <activity
             android:name=".DeviceListActivity"
             android:label="@string/title_activity_blue_tooth_scanner"
-            android:theme="@style/AppTheme.NoActionBar"
+            android:theme="@style/Theme.AppCompat.Dialog"
             android:parentActivityName=".MainActivity"></activity>
     </application>
 
